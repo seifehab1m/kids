@@ -1,0 +1,1904 @@
+/*  ======= // TABLE OF CONTENT // ===========
+01- Google Fonts
+
+*/
+
+:root {
+    --maxWidth: 1170px;
+    --paddingPc: 98px;
+    --paddingTab: 24px;
+    --paddingMob: 16px;
+    --mainColor: #F7D904;
+    --redColor: #E02B1D;
+    --colorMuted: #7E7E7E;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    /* direction: rtl; */
+}
+
+@font-face {
+
+    font-family: "BalooBold";
+    src: url('../fonts/Baloo2-Bold.ttf');
+}
+
+@font-face {
+
+    font-family: "Baloosemi";
+    src: url('../fonts/Baloo2-SemiBold.ttf');
+}
+
+@font-face {
+
+    font-family: "BalooMedium";
+    src: url('../fonts/Baloo2-Medium.ttf');
+}
+
+@font-face {
+
+    font-family: "BalooRegular";
+    src: url('../fonts/Baloo2-Regular.ttf');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Baloo 2', cursive;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: "Baloosemi";
+    line-height: 1.3;
+    padding-top: 85px;
+}
+
+h2 {
+    font-size: 42px;
+    font-family: "BalooBold";
+}
+
+.title {
+    margin: auto;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.yellowImgTitle {
+    position: absolute;
+    top: -70%;
+    right: -50px;
+}
+
+p {
+    font-size: 18px;
+    font-family: "BalooMedium";
+    color: var(--colorMuted);
+    padding-top: 13px;
+}
+
+.mainParg {
+    max-width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.pageContainer {
+    margin: auto;
+    max-width: var(--maxWidth);
+}
+
+.outlineMain,
+.outlineRed {
+    outline: 2px solid var(--mainColor);
+    min-width: 30px;
+    min-height: 31px;
+    border-radius: 50%;
+}
+
+.outlineRed {
+    outline: 2px solid var(--redColor);
+}
+
+.circle {
+    width: 30px;
+    height: 31px;
+    border: 2px dotted white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mainColor);
+}
+
+
+.customButton {
+    background-color: var(--mainColor);
+    border: 2px dotted white;
+    color: white;
+    border-radius: 20px;
+    width: 135px;
+    height: 42px;
+
+}
+
+.avatarImg {
+    top: 40%;
+    left: 50%;
+    max-width: 213px;
+    max-height: 187px;
+    border-radius: 70% 30% 50% 50% / 60% 60% 40% 40%;
+    overflow: hidden;
+}
+
+.counter {
+    width: 103px;
+    height: 36px;
+    background-color: #F5F5F5;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter h6 {
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
+    font-size: 17px;
+    font-family: "BalooRegular";
+    cursor: pointer;
+
+}
+
+.counter sub {
+    color: #111111;
+}
+
+.counter .add {
+    color: var(--mainColor);
+}
+
+/* card */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    border-color: transparent;
+    max-width: 370px;
+}
+
+.cardImg {
+    width: 100%;
+    height: 233px;
+    position: relative;
+}
+
+.cardContent {
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.cardLink {
+    color: var(--mainColor);
+    text-decoration: none;
+}
+
+@media (max-width: 575px) {
+    .card {
+        max-width: 370px;
+        margin: auto;
+    }
+}
+
+/* date card */
+
+.datecontent {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+}
+
+.datecontent h6 {
+    font-family: "BalooBold";
+    font-size: 18px;
+}
+
+.datecontent .number {
+    font-size: 18px;
+}
+
+.datecontent .date {
+    font-size: 13px;
+
+}
+
+/* nav title in all section */
+.navTitle {
+    width: 100%;
+    height: 275px;
+    background-image: url('../images/waveHome.png');
+    background-size: cover;
+    padding-left: 30px;
+    padding-right: 140px;
+    margin-top: 70px;
+}
+
+.navTitle .title h3 {
+    font-size: 35px;
+    color: #111111;
+    font-family: "BalooBold";
+}
+
+.navTitle .title p {
+    font-family: "BalooRegular";
+}
+
+.navTitle .rocket {
+    width: 60px;
+    height: 55px;
+    padding-bottom: 90px;
+}
+
+
+/* img curve with bg */
+
+.avatarImg {
+    top: 40%;
+    left: 50%;
+    max-width: 213px;
+    max-height: 187px;
+    border-radius: 70% 30% 50% 50% / 60% 60% 40% 40%;
+    overflow: hidden;
+}
+
+.avatarImg .hoverImg {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.avatarImg:hover .hoverImg {
+    background-color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.avatarImg .contIcon {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 20px;
+    transition: all 0.5s;
+}
+
+
+.avatarImg .contIcon:hover {
+    background-color: var(--mainColor);
+    transition: all 0.5s;
+}
+
+.avatarImg .hoverImg h5 {
+    color: white;
+}
+
+
+/* img curve */
+.imgCurve {
+    border-radius: 52% 48% 49% 52% / 13% 11% 15% 15%;
+    overflow: hidden;
+}
+
+/* image selected */
+.imageSelected {
+    z-index: 88888888888888888888;
+    background-color: rgba(191, 188, 188, 0.5);
+    display: none !important;
+}
+
+.imageSelected .close {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    right: 10%;
+    cursor: pointer;
+}
+
+.imageSelected .image {
+    width: 70%;
+    height: 85%;
+}
+
+.imageSelected .card {
+    background-color: white;
+    text-align: center;
+    padding: 43px;
+    border-radius: 50px;
+}
+
+.imageSelected .card .image {
+    width: 122px;
+    height: 106px;
+}
+
+.imageSelected .card h4 {
+    font-family: "BalooBold";
+    font-size: 22px;
+}
+
+.imageSelected .card p {
+    width: 72%;
+}
+
+/* hexagon shap */
+.hexagon {
+    width: 145px;
+    height: 150px;
+    margin-left: 50px;
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    overflow: hidden;
+}
+
+/* cart button */
+.cartSummary .addbtn {
+    background-color: #0292C9;
+    color: white;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+/* home search bar */
+.searchbar {
+    position: absolute;
+    right: 40px;
+    top: 90px;
+    width: 300px;
+    height: 100px;
+    background-color: white;
+    border-radius: 25px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 40px 50px 40px;
+
+}
+
+.searchbar input {
+    border-color: var(--mainColor);
+
+}
+
+
+/* Navbar */
+nav {
+    padding-left: var(--paddingPc) !important;
+    padding-right: 98px !important;
+    z-index: 999999;
+}
+
+nav li {
+    font-size: 18px;
+    font-family: "BalooRegular";
+    width: fit-content;
+    white-space: nowrap;
+}
+
+nav li:not(:last-child) {
+    padding-right: 20px;
+}
+
+nav li a {
+    color: #000000 !important;
+}
+
+.dropdown-item:hover {
+    color: var(--mainColor) !important;
+    background-color: transparent;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.bg-icon-search {
+    background-color: #E02B1D;
+    cursor: pointer;
+}
+
+.active {
+    color: var(--mainColor) !important;
+}
+
+/* ---------------------------  media Query of Global ----------------------------- */
+/* h2 and the img of title media Query  */
+@media (max-width: 1366px) {
+    h2 {
+        font-size: 35px !important;
+    }
+
+    .yellowImgTitle {
+        top: -120%;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 28px !important;
+    }
+}
+
+/* Navbar Media Query */
+@media (max-width: 1366px) {
+    nav {
+        padding-left: var(--paddingTab) !important;
+        padding-right: var(--paddingTab) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding-left: var(--paddingMob) !important;
+        padding-right: var(--paddingMob) !important;
+    }
+}
+
+/* pargraph of Titles media Query  */
+@media (max-width: 1366px) {
+    .mainParg {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainParg {
+        max-width: 100%;
+    }
+}
+
+/* main pargraph of title media Query */
+@media (max-width: 1024px) {
+    .pagePadding {
+        padding-left: var(--paddingTab);
+        padding-right: var(--paddingTab);
+    }
+}
+
+@media (max-width: 768px) {
+    .pagePadding {
+        padding-left: var(--paddingMob);
+        padding-right: var(--paddingMob);
+    }
+}
+
+/* navTitle Media Query */
+@media (max-width: 1366px) {
+
+
+
+    .navTitle .title h3 {
+        font-size: 35px;
+        color: #111111;
+        font-family: "BalooBold";
+    }
+
+}
+
+@media (max-width: 768px) {
+    .navTitle {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .navTitle .cloud,
+    .navTitle .rocket {
+        display: none;
+    }
+
+}
+
+/* --------------------------------------- Home Page -------------------------------------*/
+
+.homebg {
+    margin-top: 72px !important;
+    min-height: 100vh;
+    background-image: url('../images/homebg.png');
+    background-size: cover;
+    max-width: 100%;
+    position: relative;
+}
+
+.homebg .searchbar {
+    top: 10px;
+}
+
+.pyramidContaier {
+    position: relative;
+    max-width: 70%;
+    min-height: 100vh;
+}
+
+.homeContent {
+    position: absolute;
+    max-width: 590px;
+    top: 40%;
+    transform: translateY(-40%);
+    padding-left: var(--paddingPc);
+}
+
+.homePar {
+    font-size: 24px;
+    color: var(--colorMuted);
+}
+
+
+@media (max-width: 1366px) {
+
+    .homeContent {
+        padding-left: var(--paddingTab);
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .homePar {
+        font-size: 24px
+    }
+}
+
+@media (max-width: 768px) {
+    .homeContent {
+        padding-left: var(--paddingMob);
+        width: 75%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .homePar {
+        font-size: 16px
+    }
+}
+
+/* about page */
+.aboutbg {
+    margin-top: 90px;
+}
+
+.aboutbg .imageAbout {
+    max-width: 510px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.contentTitle {
+    padding-top: 20px;
+    max-width: 530px;
+}
+
+.aboutbg h3 {
+    font-size: 28px;
+    font-family: "BalooMedium";
+    color: var(--mainColor);
+}
+
+.aboutbg p {
+    max-width: 90%;
+}
+
+@media (max-width: 992px) {
+    .aboutbg {
+        margin-top: 10px;
+    }
+}
+
+
+/* popular class Page */
+.classbg {
+    margin-top: 120px;
+    padding-top: 50px;
+    background-image: url('../images/classbg.png');
+    text-align: center;
+}
+
+.classbg .classParg {
+    max-width: 40%;
+    margin: auto;
+}
+
+.classbg .classImg {
+    max-width: 183px;
+    max-height: 161px;
+    border-radius: 40px;
+    margin: auto;
+}
+
+.classbg .classImgTitle {
+    background-color: #8800C6;
+    padding: 2px 32px 2px 32px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: "BalooMedium";
+    width: fit-content;
+    margin: auto;
+    color: white;
+    margin-top: 20px;
+}
+
+.classbg .classImgParg {
+    color: #3B3839;
+    max-width: 90%;
+    margin: auto;
+}
+
+.classbg .classBtn {
+    margin-top: 50px;
+    margin-bottom: 93px;
+}
+
+@media (max-width: 1366px) {
+    .classbg .classImg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* portfolio page */
+.portfliobg {
+    background-position: center center;
+    background-size: cover;
+    padding-top: 70px;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+/* @media (max-width: 1366px) {
+
+    .portfliobg .avatarImg {
+       
+        max-width: 200px;
+        max-height: 130px;
+    }
+} */
+
+/* Blog Page */
+.blogbg {
+    padding-top: 80px;
+    background-image: url('../images/blogbg.png');
+}
+
+.blogbg .blogTitle {
+    text-align: center;
+}
+
+
+.blogbg .blogDate {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 74px;
+}
+
+
+.blogbg .ImgTitle {
+    font-size: 18px;
+    font-family: "BalooMedium";
+    color: #0292C9;
+    padding-top: 16px;
+}
+
+.blogbg .ImgSubTitle {
+    font-size: 22px;
+    font-family: "BalooMedium";
+    padding-top: 0px;
+}
+
+.blogbg .ImgSubParg {
+    font-size: 16px;
+    padding-top: 7px;
+}
+
+.blogbg .blogBtn {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+@media (max-width:768px) {
+    .blogbg .ImgTitle {
+        font-size: 15px;
+    }
+
+    .blogbg .ImgSubTitle {
+        font-size: 19px;
+    }
+
+    .blogbg .ImgSubParg {
+        padding-top: 7px;
+        font-size: 13px;
+    }
+
+    .blogbg .cardLink {
+        font-size: 13px;
+    }
+}
+
+/* staff page */
+.staffbg {
+    position: relative;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 130px;
+    text-align: center;
+}
+
+.staffbg .leaf,
+.staffbg .leaf2 {
+    position: absolute;
+
+    z-index: -1;
+}
+
+.staffbg .leaf {
+    left: 10%;
+    top: 20%;
+}
+
+.staffbg .leaf2 {
+    top: 40%;
+    right: 15%;
+}
+
+.staffbg .staffParg {
+    max-width: 40%;
+    margin: auto;
+}
+
+.staffbg .carousel-control-prev,
+.staffbg .carousel-control-next {
+    opacity: 1;
+}
+
+.staffbg .carousel-control-next-icon,
+.staffbg .carousel-control-prev-icon {
+    width: 60%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.staffbg .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='orange'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+}
+
+.staffbg .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='orange'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}
+
+.staffbg .carousel-control-next,
+.staffbg .carousel-control-prev {
+    width: 50px;
+}
+
+.staffbg .instractor {
+    color: #3B3839;
+    font-family: "BalooMedium";
+    font-size: 26px;
+    margin-top: 36px;
+}
+
+.staffbg .career {
+    font-size: 22px;
+    font-family: "BalooRegular";
+    color: var(--mainColor);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    display: none;
+}
+
+/*contact page  */
+.contactbg {
+    background-image: url('../images/footer.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 150px;
+}
+
+.contactbg .contact {
+    max-width: 677px;
+    max-height: 705px;
+    position: relative;
+}
+
+.contactbg .contactContent {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 60%;
+    transform: translateX(-50%);
+
+}
+
+.contactbg h2 {
+    color: white;
+}
+
+.contactbg input {
+    border: transparent;
+    border-bottom: 1px solid wheat;
+    background-color: transparent;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.contactbg input:first-of-type {
+    padding-top: 35px;
+}
+
+.contactbg input:focus {
+    outline: none;
+}
+
+.contactbg input::placeholder {
+    color: white;
+    font-size: 22px;
+    font-family: "BalooRegular";
+
+}
+
+.contactbg button {
+    background-color: white;
+    border-color: var(--mainColor);
+    color: var(--mainColor);
+    margin-top: 20px;
+    font-family: "Baloosemi";
+    font-size: 20px;
+
+}
+
+@media (max-width: 1200px) {
+    .contactbg .contactContent {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .contactbg .contact {
+        margin: auto;
+    }
+
+    .contactbg .child {
+        display: none !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .contactbg h2 {
+        font-size: 35px;
+    }
+
+    .contactbg .contactContent {
+        padding-top: 10px;
+    }
+
+    .contactbg input:first-of-type {
+        padding-top: 15px;
+    }
+
+    .contactbg input {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contactbg button {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 451px) {
+    .contactbg .contactContent {
+        padding-top: 0px;
+    }
+
+    .contactbg input:first-of-type {
+        padding-top: 10px;
+    }
+
+    .contactbg input {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* footer page */
+footer h6 {
+    font-family: "BalooMedium";
+    font-size: 18px;
+    color: #000000;
+    padding-right: 44px;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.lamp {
+    width: 45px;
+}
+
+.cloud {
+    width: 240px;
+}
+
+/*---------------------------------- index 2 page -------------------------------------  */
+
+.upcomingEventsbg {
+    padding-top: 100px;
+    margin: auto;
+
+}
+
+.upcomingEventsbg .eventParg {
+    width: 40%;
+    margin: auto;
+}
+
+.upcomingEventsbg .item {
+    background-color: #FFF9C4;
+    padding: 24px 20px 0px 28px;
+    border-radius: 10px;
+    margin-top: 28px;
+}
+
+.upcomingEventsbg .imageItem {
+    max-width: 82px;
+    max-height: 78px;
+}
+
+.upcomingEventsbg .imageDate {
+    width: 78px;
+    height: 48px;
+}
+
+.upcomingEventsbg .contentItem p {
+    font-size: 16px;
+}
+
+.upcomingEventsbg .imageItem {
+    margin-right: 18px;
+}
+
+.upcomingEventsbg .eventImage1 {
+    max-width: 176px;
+    max-height: 175px;
+    margin: auto;
+}
+
+.upcomingEventsbg .eventImage2 {
+    max-width: 290px;
+    max-height: 280px;
+}
+
+.upcomingEventsbg .eventImage3 {
+    max-width: 230px;
+    max-height: 228px;
+}
+
+.upcomingEventsbg button {
+    margin-top: 50px;
+}
+
+
+
+/*---------------------------------- index 3 page -------------------------------------  */
+.ourEventsbg {
+    margin-top: 50px;
+    padding-top: 50px;
+    background-image: url('../images/oureventsbg.png');
+}
+
+.ourEventsbg .ourEventsTitle {
+    text-align: center;
+}
+
+
+.ourEventsbg .cardTitle {
+    font-size: 24px !important;
+    font-family: "BalooMedium";
+    color: #3B3839;
+    padding-top: 13px;
+}
+
+.ourEventsbg .cardParg {
+    font-size: 16px;
+    font-family: "BalooRegular";
+    margin: 0px;
+    padding-bottom: 0px;
+    padding-top: 8px;
+}
+
+.ourEventsbg .cardLink {
+    margin-top: 10px;
+}
+
+.ourEventsbg .eventBtn {
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    padding-bottom: 50px;
+}
+
+/*---------------------------------- day at school -------------------------------------  */
+
+
+/* DayAtSchoolContent */
+.dayAtSchoolImage {
+    max-width: 750px;
+    height: 100%;
+    /* max-height: 705px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DayAtSchoolContent .imgCurve .arrowLeft,
+.DayAtSchoolContent .imgCurve .arrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background-color: var(--mainColor);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+.DayAtSchoolContent .imgCurve .arrowLeft {
+    left: 12px;
+}
+
+.DayAtSchoolContent .imgCurve .arrowRight {
+    right: 12px;
+}
+
+.DayAtSchoolContent .imgCurve .arrows i {
+    font-size: 25px;
+}
+
+.DayAtSchoolContent h3 {
+    font-size: 34px;
+    color: #111111;
+    font-family: "BalooBold";
+}
+
+.DayAtSchoolContent .content p {
+    font-family: "BalooRegular";
+    max-width: 90%;
+    line-height: 1.8;
+}
+
+.DayAtSchoolContent .activitesIems {
+    color: #111111;
+    opacity: 0.75;
+}
+
+.DayAtSchoolContent .activitesIems img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.DayAtSchoolContent .activitesIems h6 {
+    color: var(--colorMuted);
+    font-size: 18px;
+}
+
+.DayAtSchoolContent .activitesIems span {
+    color: #111111;
+    opacity: 0.75;
+}
+
+/*---------------------------------- About Us -------------------------------------  */
+
+/* kids fun */
+
+.kidsFun .content h5 {
+    color: var(--mainColor);
+    font-family: "BalooMedium";
+}
+
+.kidsFun .content p {
+    font-family: "BalooRegular";
+    max-width: 90%;
+}
+
+.kidsFun .icon {
+    background-color: var(--mainColor);
+    border: 2px dashed white;
+    width: fit-content;
+    border-radius: 50%;
+
+}
+
+.kidsFun .icon img {
+    padding: 17px 15px 17px 19px;
+}
+
+.kidsFun h4 {
+    font-size: 24px;
+    font-family: "Baloosemi";
+}
+
+/* What Parents Say */
+.parentsSay {
+    padding-top: 80px;
+
+}
+
+.parentsSay .parentSlide {
+    background-color: rgba(212, 212, 212, 0.4);
+    padding-top: 27px;
+    padding-left: 27px;
+    padding-right: 27px;
+    /* border-radius: 20px; */
+    border-radius: 52% 48% 49% 52% / 13% 11% 15% 15%;
+    padding-bottom: 40px;
+}
+
+.parentsSay .parentImg {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.parentsSay .imgTitle h5 {
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    font-family: "BalooMedium";
+}
+
+.parentsSay .imgTitle p {
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+    font-family: "BalooRegular";
+}
+
+.parentsSay .parentSlide h6 {
+    font-family: "BalooRegular";
+    font-size: 14px;
+    padding-top: 15px;
+}
+
+.parentsSay .swiper-pagination {
+    position: static;
+}
+
+.parentsSay .swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    margin-top: 25px;
+}
+
+.parentsSay .swiper-pagination-bullet {
+    border-radius: 0px;
+    height: 3px;
+    width: 25px;
+}
+
+.parentsSay .swiper-pagination-bullet-active {
+    background-color: var(--mainColor);
+}
+
+/* num of groups page */
+.numOfGroups {
+    padding-left: var(--paddingPc);
+    padding-right: var(--paddingPc);
+    width: 100%;
+    min-height: 522px;
+    background-image: url('../images/numOfGropsbg.png');
+    text-align: center;
+}
+
+.numOfGroups h3 {
+    font-size: 40px;
+    font-family: "BalooBold";
+}
+
+.numOfGroups h5 {
+    font-size: 24px;
+    font-family: "BalooBold";
+}
+
+/* offer */
+.offer {
+    padding-top: 80px;
+    background-image: url('../images/offerbg.png');
+}
+
+.offer .imageDesc h5 {
+    font-size: 22px;
+    font-family: "BalooBold";
+}
+
+.offer .imageDesc p {
+    font-family: "BalooRegular";
+}
+
+/*---------------------------------- class Page -------------------------------------  */
+/* nav and tabs subject & portfolio*/
+
+.subject .nav {
+
+    width: 90%;
+    margin: auto;
+    background-image: none !important;
+}
+
+.subject .nav-item {
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+}
+
+.subject .nav-item .imageItem {
+    width: 92px;
+    height: 80px;
+}
+
+.subject .nav-item h5 {
+    font-size: 20px;
+    font-family: "BalooBold";
+    color: #111111;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.portfolio .nav-item h5 {
+    font-family: "BalooMedium";
+    padding: 5px 6px 5px 6px;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.subject .nav-pills .nav-link {
+    border: 1px dashed var(--mainColor);
+    border-radius: 25px;
+}
+
+.portfolio .nav-pills .nav-link {
+    border-radius: 15px;
+}
+
+.subject .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #FFF9C4;
+    border: transparent;
+    border-radius: 25px;
+}
+
+.subject .nav-pills .nav-link.active h5,
+.nav-pills .show>.nav-link {
+
+    font-family: "BalooBold" !important;
+}
+
+.subject .tab-pane,
+.class .tab-pane {
+    width: 100%;
+    min-height: 715px;
+}
+
+.class .tab-pane {
+    background-image: url('../images/tabbg.png');
+    background-size: cover;
+    padding-bottom: 80px;
+
+}
+
+.subject .imgCurve {
+    max-width: 446px;
+    max-height: 446px;
+}
+
+.subject .selectedTab h2,
+.subject .selectedTab h5 {
+    color: #111111;
+}
+
+.subject .selectedTab h5 {
+    padding-top: 19px;
+}
+
+/* schedule */
+.schedule {
+    padding-top: 100px;
+    padding-left: var(--paddingPc);
+    padding-right: var(--paddingPc);
+    padding-bottom: 140px;
+    background-image: url('../images/schedulebg.png');
+
+}
+
+.schedule .day {
+    width: 145px;
+    background-color: #5887A9;
+    border-radius: 25px;
+}
+
+.schedule .day h5 {
+    font-size: 18px;
+    font-family: "BalooMedium";
+    padding: 7px 32px 7px 32px;
+    color: white;
+    text-align: center;
+}
+
+.schedule .durationClass {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.schedule .time {
+    position: absolute;
+    width: fit-content;
+    white-space: nowrap;
+    left: 40% !important;
+    top: 35%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+
+.schedule .time h6 {
+    color: white;
+}
+
+.schedule .time h6:first-child {
+    font-size: 18px;
+    font-family: "BalooMedium";
+}
+
+.schedule .time h6:last-child {
+    font-size: 16px;
+    font-family: "BalooRegular";
+}
+
+/*---------------------------------- class Page -------------------------------------  */
+.staffPage {
+    padding-top: 70px !important;
+    padding-left: var(--paddingPc);
+    padding-right: var(--paddingPc);
+}
+
+/*---------------------------------- blog Page -------------------------------------  */
+.blogPage,
+.ourEventsPage {
+    background-image: none;
+}
+
+/*---------------------------------- Activites Page -------------------------------------  */
+/* .Activities .borderImage {
+    max-width: 163px;
+    overflow: hidden;
+} */
+
+.Activities h5 {
+    font-family: "BalooBold";
+    margin: 0px;
+    font-size: 24px;
+    margin-top: 22px;
+}
+
+.Activities p {
+    max-width: 235px;
+    margin: auto;
+    padding-top: 8px !important;
+}
+
+/* teach child */
+.teachChild {
+    padding-top: 30px;
+}
+
+.teachChild h5 {
+    font-family: "BalooBold";
+    color: #0292C9;
+    font-size: 18px;
+}
+
+.teachChild h2 {
+    font-size: 35px;
+}
+
+.teachChild p {
+    font-size: 22px;
+    color: var(--colorMuted) !important;
+    line-height: 1.8;
+}
+
+/*---------------------------------- hallowen Page -------------------------------------  */
+.hallowen h5 {
+    color: #3B3839 !important;
+    font-family: "BalooBold" !important;
+    font-size: 24px;
+}
+
+.hallowen .icon {
+    width: 24px;
+    height: 24px;
+    background-color: #FFF9C4;
+}
+
+.hallowen p {
+    padding: 0px;
+    margin: 0px;
+    font-family: "BalooRegular" !important;
+
+}
+
+.hallowen .title2 {
+    max-width: 100px;
+    max-height: 80px;
+}
+
+.hallowen .funDay h3 {
+    font-family: "BalooBold";
+    font-size: 35px;
+    color: #3B3839;
+    padding-top: 60px;
+}
+
+.hallowen .funDay p {
+    line-height: 1.8;
+    max-width: 85%;
+    padding-top: 15px;
+}
+
+.hallowen .photosOfEvents {
+    padding-top: 80px !important;
+    background-image: none;
+}
+
+.hallowen .recentEvent {
+    padding-top: 80px !important;
+}
+
+/*---------------------------------- shop Page -------------------------------------  */
+.shop {
+    padding-top: 80px;
+}
+
+/* search */
+.shop .search {
+    background-color: #F5F5F5;
+    border: transparent;
+    border-radius: 25px;
+    height: 40px;
+}
+
+.shop .search::placeholder {
+    color: var(--colorMuted);
+    padding-left: 10px;
+}
+
+.shop .searchicon {
+    background-color: var(--mainColor);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px dashed white;
+}
+
+/* price & filter */
+.shop .price h5 {
+    font-size: 20px;
+    font-family: "BalooBold";
+    padding-top: 10px;
+}
+
+
+.shop .line {
+    width: 85%;
+    height: 2px;
+    background-color: var(--mainColor);
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.shop .line::after,
+.shop .line::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--mainColor);
+    border-radius: 50%;
+    top: -10px;
+    padding-top: 10px;
+}
+
+.shop .line::before {
+    left: -18px;
+}
+
+.shop .line::after {
+    right: -18px;
+}
+
+.shop .linePrice {
+    width: calc(85% + 36px);
+    margin: auto;
+}
+
+.shop .linePrice h6 {
+    font-size: 15px;
+    color: #111111;
+    font-family: "BalooRegular";
+    margin-top: 11px;
+}
+
+.shop .filter label {
+    font-size: 16px;
+    color: var(--colorMuted);
+    font-family: "BalooMedium";
+    padding-top: 5px;
+}
+
+.shop .filter h5,
+.shop .tag h5 {
+    font-size: 20px;
+    font-family: "BalooBold";
+    margin-top: 26px;
+}
+
+/* tag */
+.shop .tag h6 {
+    font-size: 12px;
+    font-family: "BalooBold";
+    color: #111111 !important;
+    margin-right: 5px;
+    padding: 9px 22px 9px 22px;
+    border-radius: 25px;
+    border: 1px dashed var(--mainColor);
+
+}
+
+.shop .tag .active {
+    background-color: #FFF9C4;
+    padding: 9px 22px 9px 22px;
+    border-radius: 25px;
+    border-color: transparent;
+}
+
+.shop .dropdown-toggle {
+    background-color: #F5F5F5 !important;
+    border-radius: 20px;
+    border-color: transparent;
+    color: #111111;
+    font-family: "BalooMedium";
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* pagination section */
+
+.shop .item {
+    padding: 28px 42px 19px 42px;
+    background-color: #FFFBDE;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.shop .showResult {
+    font-size: 16px;
+    font-family: "BalooRegular";
+    color: var(--colorMuted);
+}
+
+.shop .item h4 {
+    font-size: 24px;
+    font-family: "Baloosemi";
+}
+
+.shop .item .beforeDiscound {
+    font-size: 20px;
+    font-family: "BalooRegular";
+    text-decoration: line-through;
+    color: var(--colorMuted);
+}
+
+.shop .item .afterDiscound {
+    font-size: 22px;
+    color: var(--mainColor);
+    font-family: "BalooRegular";
+}
+
+.shop .sale {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(224, 43, 29, 0.1);
+    border-bottom-right-radius: 50px;
+}
+
+.shop .sale h5 {
+    font-family: "BalooMedium";
+    font-size: 18px;
+    padding: 10px;
+    color: #E02B1D;
+}
+
+.shop .pagination a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    font-size: 20px;
+    font-family: "BalooRegular";
+    border: 0px;
+    background-color: #F5F5F5;
+    color: var(--colorMuted) !important;
+}
+
+.shop .pagination .active {
+    border: 1px dashed white;
+    background-color: var(--mainColor);
+}
+
+.shop .pagination a span {
+    color: var(--mainColor);
+    font-size: 20px;
+}
+
+.shop .addToCart {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(191, 188, 188, 0.5);
+    display: none !important;
+}
+
+.shop .item:hover .addToCart {
+    display: flex !important;
+}
+
+/*---------------------------------- Products Details Page -------------------------------------  */
+.productDetails .bigitem {
+    max-width: 570px;
+    max-height: 570px;
+}
+
+.productDetails .smallItem {
+    max-width: 170px !important;
+    max-height: 155px !important;
+    margin: auto;
+}
+
+.productDetails .borderItem {
+    background-color: white;
+    border: 2px dashed var(--mainColor);
+}
+
+.productDetails h3 {
+    font-size: 34px;
+    font-family: "BalooBold";
+    color: #111111;
+}
+
+.productDetails .price {
+    padding-top: 6px;
+}
+
+.productDetails .afterDiscound {
+    font-family: "Baloosemi";
+    font-size: 32px;
+    color: var(--mainColor);
+}
+
+.productDetails .beforeDiscound {
+    font-family: "BalooRegular";
+    font-size: 22px;
+    color: var(--colorMuted);
+}
+
+.productDetails .mainSubTitle {
+    padding-top: 20px;
+    font-family: "BalooBold";
+    color: #0292C9;
+}
+
+.productDetails p {
+    color: #111111;
+    line-height: 1.8 !important;
+}
+
+.productDetails .details {
+    /* padding-top: 1px; */
+}
+
+.productDetails .details h5 {
+    padding-top: 20px;
+    color: #111111;
+    font-family: "BalooBold";
+    font-size: 18px;
+}
+
+.productDetails .details .secText {
+    opacity: 0.8;
+}
+
+.productDetails .RelatedText {
+    padding-top: 80px;
+}
+
+/*---------------------------------- Empty Cart Page -------------------------------------  */
+.emptyCart h4 {
+    font-family: "BalooBold";
+    font-size: 25px;
+    color: #3B3839;
+    margin-top: 10px;
+}
+
+.done {
+    z-index: 888888888888888888888;
+}
+
+
+/*---------------------------------- checkout Page -------------------------------------  */
+
+.checkOut h4 {
+    font-size: 22px;
+    color: #111111;
+    font-family: "BalooBold";
+}
+
+.checkOut label {
+    padding-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "BalooRegular";
+}
+
+.checkOut input,
+.checkOut .form-control {
+    border-radius: 15px;
+}
+
+.checkOut .dropdown-toggle {
+    border-color: rgb(191, 188, 188);
+}
+
+.checkOut .icon,
+.checkOut .icons {
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+.checkOut h6 {
+    font-size: 16px;
+    font-family: "BalooRegular";
+    color: #111111;
+}
+
+.checkOut .cartSummary {
+    background-color: #F5F5F5;
+    border-radius: 25px;
+    padding-top: 20px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.checkOut .cartSummary .inputCont {
+    /* width: 85%; */
+}
+
+.checkOut .RelatedText {
+    font-family: "BalooBold" !important;
+    font-size: 35px;
+
+}
+
+.checkOut .card {
+    max-width: 500px !important;
+    margin: 16px;
+
+}
+
+/*---------------------------------- cart Page -------------------------------------  */
+.cart th {
+    font-family: "BalooRegular" !important;
+    font-size: 18px;
+    color: #111111;
+    font-weight: 400;
+}
+
+.cart td {
+    padding-top: 15px;
+}
+
+.cart .avatarName,
+.cart .price {
+    font-family: "BalooMedium";
+    font-size: 18px;
+}
+
+.cart .price {
+    font-family: "Baloosemi";
+}
+
+.cart .delete {
+    cursor: pointer;
+}
+
+
+
+/* start tabs lsa bgrb */
+
+.tabsContainer {
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+    overflow: scroll;
+
+}
+
+.tabsContainer::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
+}
+
+/* --------------------- footer ------------------------------------------- */
+.footerbg {
+    width: 100%;
+    text-align: center;
+}
+
+.footerbg h6 {
+    display: inline-block;
+
+}
+
+
+/* end tabs lsa bgrb */
+
+
+/* .animate {
+    /* transform: rotate(35deg); */
+/* }  */

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "swiper": "^8.4.5",
+    "wow.js": "^1.2.2"
+  }
+}

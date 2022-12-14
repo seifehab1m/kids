@@ -9,6 +9,8 @@ let searchbar = document.getElementsByClassName('searchbar');
 let subVal = document.getElementsByClassName('subVal');
 let addVal = document.getElementsByClassName('addVal');
 let counterValue = document.getElementsByClassName('counterValue');
+let pagination = document.getElementsByClassName('paginationLi');
+let shopTag = document.getElementsByClassName('tagItem');
 let value, index;
 let toggleBar = "close"
 
@@ -44,11 +46,11 @@ for (i = 0; i < addVal.length; i++) {
 
   addVal[i]?.addEventListener("click", function (e) {
 
-   index = getIndex(e,addVal);
-   value = counterValue[index].innerHTML;
-   value = parseInt(value)
-   value += 1;
-   counterValue[index].innerHTML = value + ""
+    index = getIndex(e, addVal);
+    value = counterValue[index].innerHTML;
+    value = parseInt(value)
+    value += 1;
+    counterValue[index].innerHTML = value + ""
 
   })
 }
@@ -57,22 +59,19 @@ for (i = 0; i < addVal.length; i++) {
 
   subVal[i]?.addEventListener("click", function (e) {
 
-   index = getIndex(e,subVal);
-   value = counterValue[index].innerHTML;
-   value = parseInt(value)
-   if(value!=1)
-   {
-    value -= 1;
-   }
-   counterValue[index].innerHTML = value + ""
+    index = getIndex(e, subVal);
+    value = counterValue[index].innerHTML;
+    value = parseInt(value)
+    if (value != 1) {
+      value -= 1;
+    }
+    counterValue[index].innerHTML = value + ""
   })
 }
-function getIndex(e,array) {
+function getIndex(e, array) {
 
-  console.log(addVal);
   return Array.from(array).indexOf(e.target);
 }
-
 
 // swiper in parent says section
 var swiper = new Swiper(".parentSlides", {
@@ -129,35 +128,72 @@ var swiper = new Swiper(".staffSlides", {
   }
 });
 
-
+// double slider in shop page
 var rangeOne = document.querySelector('input[name="rangeOne"]'),
-		rangeTwo = document.querySelector('input[name="rangeTwo"]'),
-		outputOne = document.querySelector('.outputOne'),
-		outputTwo = document.querySelector('.outputTwo'),
-		inclRange = document.querySelector('.incl-range'),
-		updateView = function () {
-			if (this.getAttribute('name') === 'rangeOne') {
-				outputOne.innerHTML = this.value;
-				outputOne.style.left = this.value / this.getAttribute('max') * 100 + '%';
-			} else {
-				outputTwo.style.left = this.value / this.getAttribute('max') * 100 + '%';
-				outputTwo.innerHTML = this.value
-			}
-			if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
-				inclRange.style.width = (rangeOne.value - rangeTwo.value) / this.getAttribute('max') * 100 + '%';
-				inclRange.style.left = rangeTwo.value / this.getAttribute('max') * 100 + '%';
-			} else {
-				inclRange.style.width = (rangeTwo.value - rangeOne.value) / this.getAttribute('max') * 100 + '%';
-				inclRange.style.left = rangeOne.value / this.getAttribute('max') * 100 + '%';
-			}
-		};
+  rangeTwo = document.querySelector('input[name="rangeTwo"]'),
+  outputOne = document.querySelector('.outputOne'),
+  outputTwo = document.querySelector('.outputTwo'),
+  inclRange = document.querySelector('.incl-range'),
+  updateView = function () {
+    if (this.getAttribute('name') === 'rangeOne') {
+      outputOne.innerHTML = this.value;
+      outputOne.style.left = this.value / this.getAttribute('max') * 100 + '%';
+    } else {
+      outputTwo.style.left = this.value / this.getAttribute('max') * 100 + '%';
+      outputTwo.innerHTML = this.value
+    }
+    if (parseInt(rangeOne.value) > parseInt(rangeTwo.value)) {
+      inclRange.style.width = (rangeOne.value - rangeTwo.value) / this.getAttribute('max') * 100 + '%';
+      inclRange.style.left = rangeTwo.value / this.getAttribute('max') * 100 + '%';
+    } else {
+      inclRange.style.width = (rangeTwo.value - rangeOne.value) / this.getAttribute('max') * 100 + '%';
+      inclRange.style.left = rangeOne.value / this.getAttribute('max') * 100 + '%';
+    }
+  };
 
-	document.addEventListener('DOMContentLoaded', function () {
-		updateView.call(rangeOne);
-		updateView.call(rangeTwo);
-		$('input[type="range"]').on('mouseup', function() {
-			this.blur();
-		}).on('mousedown input', function () {
-			updateView.call(this);
-		});
-	});
+document.addEventListener('DOMContentLoaded', function () {
+  updateView.call(rangeOne);
+  updateView.call(rangeTwo);
+  $('input[type="range"]').on('mouseup', function () {
+    this.blur();
+  }).on('mousedown input', function () {
+    updateView.call(this);
+  });
+});
+
+// pagination in shop page
+for (i = 0; i < pagination.length; i++) {
+
+  pagination[i]?.addEventListener("click", function (e) {
+    index = getIndex(e, pagination);
+    removeActive(pagination)
+    addActive(index,pagination)
+  })
+}
+function removeActive(array) {
+  for (i = 0; i < array.length; i++) {
+
+    array[i].classList.remove("active")
+    if(array==pagination)
+    {
+      array[i].classList.remove("outlineMain")
+    }
+  }
+}
+function addActive(index,array) {
+  array[index].classList.add("active")
+  if(array==pagination)
+  {
+    array[index].classList.add("outlineMain")
+  }
+}
+
+// tag shopTag
+for (i = 0; i < shopTag.length; i++) {
+
+  shopTag[i]?.addEventListener("click", function (e) {
+    index = getIndex(e, shopTag);
+    removeActive(shopTag)
+    addActive(index,shopTag)
+  })
+}

@@ -52,10 +52,15 @@ h6,
 p {
     font-family: 'Baloo 2', cursive;
 }
-a
-{
+
+a {
     text-decoration: none;
 }
+
+a:hover {
+    color: var(--mainColor) !important;
+}
+
 h1 {
     font-size: 60px;
     font-family: "Baloosemi";
@@ -243,8 +248,8 @@ p {
 .navTitle .title p {
     font-family: "BalooRegular";
 }
-.navTitle .title a
-{
+
+.navTitle .title a {
     color: var(--colorMuted);
 }
 
@@ -257,18 +262,20 @@ p {
 /* clouds Of waves */
 .cloud2Top,
 .cloud2Bottom {
-   position: absolute;
+    position: absolute;
 }
-.cloud2Top
-{
-   left: 0px;
-   top: -20%;
+
+.cloud2Top {
+    left: 0px;
+    top: -20%;
 
 }
+
 .cloud2Bottom {
-   right: 0px;
-   bottom: -10%;
+    right: 0px;
+    bottom: -10%;
 }
+
 /* img curve with bg */
 
 .avatarImg {
@@ -321,7 +328,7 @@ p {
 /* image selected */
 .imageSelected {
     z-index: 88888888888888888888;
-    background-color: rgba(191, 188, 188, 0.5);
+    background-color: rgba(103, 103, 103, 0.8);
     display: none !important;
 }
 
@@ -401,10 +408,11 @@ p {
 
 }
 
-.searchbar .searchIcon{
-    
+.searchbar .searchIcon {
+
     right: 40px;
 }
+
 /* Navbar */
 nav {
     padding-left: var(--paddingPc) !important;
@@ -492,6 +500,7 @@ nav li a {
 }
 
 /* main pargraph of title media Query */
+
 @media (max-width: 1024px) {
     .pagePadding {
         padding-left: var(--paddingTab);
@@ -628,11 +637,13 @@ nav li a {
         margin-top: 10px;
     }
 }
+
 @media (min-width: 1365px) {
     .aboutbg .imageAbout {
-    margin: auto !important; 
+        margin: auto !important;
     }
 }
+
 @media (max-width: 1365.9px) {
     .aboutbg .imageAbout {
         display: flex;
@@ -660,8 +671,8 @@ nav li a {
     border-radius: 40px;
     margin: auto;
 }
-.classbg .classImgTitleStyle
-{
+
+.classbg .classImgTitleStyle {
     padding: 2px 32px 2px 32px;
     border-radius: 10px;
     font-size: 18px;
@@ -671,20 +682,25 @@ nav li a {
     color: white;
     margin-top: 20px;
 }
+
 .classbg .classImgTitle {
     background-color: #8800C6;
 
 }
+
 .classbg .classImgTitle2 {
-background-color: #37B8FA;
+    background-color: #37B8FA;
 }
+
 .classbg .classImgTitle3 {
     background-color: #FE7EB1;
 
 }
+
 .classbg .classImgTitle4 {
     background-color: #FDBA34;
 }
+
 .classbg .classImgParg {
     color: #3B3839;
     max-width: 90%;
@@ -987,10 +1003,11 @@ footer a {
     text-decoration: none;
 
 }
-footer a:hover
-{
+
+footer a:hover {
     color: var(--mainColor);
 }
+
 .lamp {
     width: 45px;
 }
@@ -1200,10 +1217,11 @@ footer a:hover
     font-size: 24px;
     font-family: "Baloosemi";
 }
-.kidsFun .playVedio
-{
+
+.kidsFun .playVedio {
     cursor: pointer;
 }
+
 /* What Parents Say */
 .parentsSay {
     padding-top: 80px;
@@ -1378,10 +1396,11 @@ footer a:hover
     min-height: 715px;
 
 }
-.class .tab-pane .cloud2Bottom
-{
+
+.class .tab-pane .cloud2Bottom {
     bottom: -30%;
 }
+
 .subject .imgCurve {
     max-width: 446px;
     max-height: 446px;
@@ -1410,27 +1429,34 @@ footer a:hover
     width: 145px;
     border-radius: 25px;
 }
+
 .schedule .day1 {
     background-color: #5887A9;
 }
+
 .schedule .day2 {
     background-color: #3B97D3;
 }
+
 .schedule .day3 {
     background-color: #DF523E;
 
 }
+
 .schedule .day4 {
     background-color: #37B8FA;
 
 }
+
 .schedule .day5 {
     background-color: #FE7EB1;
 
 }
+
 .schedule .day6 {
     background-color: #8800C6;
 }
+
 .schedule .day h5 {
     font-size: 18px;
     font-family: "BalooMedium";
@@ -1697,16 +1723,16 @@ footer a:hover
     padding: 10px;
 }
 
-.shop .dropdown-menu a
-{
+.shop .dropdown-menu a {
     font-size: 16px;
     font-family: "BalooRegular";
 }
+
 .form-check-input:checked {
-background-color: var(--mainColor) !important;
-border: transparent !important;
-    }
-    
+    background-color: var(--mainColor) !important;
+    border: transparent !important;
+}
+
 /* pagination section */
 
 .shop .item {
@@ -1799,19 +1825,40 @@ border: transparent !important;
 
 /*---------------------------------- Products Details Page -------------------------------------  */
 .productDetails .bigitem {
-    max-width: 570px;
+    max-width: 100% !important;
     max-height: 570px;
+}
+
+.productDetails .cloudImage {
+    top: 10px;
+    right: 20px;
+    width: 80px;
+    height: 60px;
+}
+
+.productDetails .rocketImage {
+    bottom: 50px;
+    left: 30px;
+    width: 65px;
+    height: 52px;
 }
 
 .productDetails .smallItem {
     max-width: 170px !important;
     max-height: 155px !important;
     margin: auto;
+    cursor: pointer;
+}
+
+.productDetails .active {
+    background-color: #FFFBDE !important;
+    border-radius: 35px;
 }
 
 .productDetails .borderItem {
     background-color: white;
     border: 2px dashed var(--mainColor);
+    border-radius: 35px;
 }
 
 .productDetails h3 {
@@ -1834,10 +1881,11 @@ border: transparent !important;
     font-family: "BalooRegular";
     font-size: 22px;
     color: var(--colorMuted);
+    text-decoration-line: line-through;
 }
 
 .productDetails .mainSubTitle {
-    padding-top: 20px;
+    padding-top: 36px;
     font-family: "BalooBold";
     color: #0292C9;
 }
@@ -1876,7 +1924,8 @@ border: transparent !important;
     font-size: 24px;
 }
 
-.productDetails .counter .addVal {
+.productDetails .counter .addVal,
+.cart .counter .addVal {
     color: var(--mainColor);
 }
 
@@ -1894,7 +1943,6 @@ border: transparent !important;
 
 
 /*---------------------------------- checkout Page -------------------------------------  */
-
 .checkOut h4 {
     font-size: 22px;
     color: #111111;
@@ -1908,9 +1956,17 @@ border: transparent !important;
     font-family: "BalooRegular";
 }
 
+.checkOut .phoneNumber {
+    border-right: transparent;
+}
+
+.checkOut .phoneNumberInput {
+    border-left: transparent;
+}
+
 .checkOut input,
 .checkOut .form-control {
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .checkOut .dropdown-toggle {
@@ -1932,11 +1988,12 @@ border: transparent !important;
 
 .checkOut .cartSummary {
     background-color: #F5F5F5;
-    border-radius: 25px;
+    border-radius: 35px;
     padding-top: 20px !important;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 24px;
+    padding-right: 29px;
     padding-bottom: 20px;
+    max-width: 370px;
 }
 
 .checkOut .cartSummary .inputCont {
@@ -1981,7 +2038,15 @@ border: transparent !important;
     cursor: pointer;
 }
 
+.cartSummary .cartMuted h6 {
+    font-size: 16px;
+    color: var(--colorMuted);
+}
 
+.cartSummary .cartblack h6 {
+    font-size: 18px;
+    color: #111111;
+}
 
 /* start tabs lsa bgrb */
 
@@ -2009,9 +2074,9 @@ border: transparent !important;
     display: inline-block;
 
 }
+
 /* copyRight */
-.copyRight .socialIcons img
-{
+.copyRight .socialIcons img {
     cursor: pointer !important;
 }
 
@@ -2072,29 +2137,29 @@ border: transparent !important;
 }
 
 .range-slider input[type=range]::-moz-focus-outer {
-  border: 0;
+    border: 0;
 }
 
 .rangeValue {
-    	width: 30px;
+    width: 30px;
 }
 
 .output {
-  position: absolute;
-  width: 40px;
-  height: 30px;
-  text-align: center;
-  color: #999;
-  border-radius: 4px;
-  display: inline-block;
-  font: bold 15px/30px Helvetica, Arial;
-  bottom: -100%;
-  left: 50%;
-  transform: translate(-50%, 0);
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    color: #999;
+    border-radius: 4px;
+    display: inline-block;
+    font: bold 15px/30px Helvetica, Arial;
+    bottom: -100%;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .output.outputTwo {
-	left: 100%;
+    left: 100%;
 }
 
 /* .container {
@@ -2106,81 +2171,81 @@ border: transparent !important;
 } */
 
 input[type=range] {
-  -webkit-appearance: none;
-  background: none;
+    -webkit-appearance: none;
+    background: none;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  height: 5px;
-  border: none;
-  border-radius: 3px;
-  background: transparent;
+    height: 5px;
+    border: none;
+    border-radius: 3px;
+    background: transparent;
 }
 
 input[type=range]::-ms-track {
-  height: 5px;
-  background: transparent;
-  border: none;
-  border-radius: 3px;
+    height: 5px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
 }
 
 input[type=range]::-moz-range-track {
-  height: 5px;
-  background: transparent;
-  border: none;
-  border-radius: 3px;
+    height: 5px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
 }
 
 input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  background: var(--mainColor);
-  margin-top: -5px;
-  position: relative;
-  z-index: 10000;
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--mainColor);
+    margin-top: -5px;
+    position: relative;
+    z-index: 10000;
 }
 
 input[type=range]::-ms-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  background: #555;
-  margin-top: -5px;
-  position: relative;
-  z-index: 10000;
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #555;
+    margin-top: -5px;
+    position: relative;
+    z-index: 10000;
 }
 
 input[type=range]::-moz-range-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  background: #555;
-  margin-top: -5px;
-  position: relative;
-  z-index: 10000;
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #555;
+    margin-top: -5px;
+    position: relative;
+    z-index: 10000;
 }
 
 input[type=range]:focus {
-  outline: none;
+    outline: none;
 }
 
 .full-range,
 .incl-range {
-	width: 100%;
-	height: 5px;
-	left: 0;
-	top: 21px;
-	position: absolute;
-	background: #DDD;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    top: 21px;
+    position: absolute;
+    background: #DDD;
 }
 
 .incl-range {
-	background: gold;
+    background: gold;
 }

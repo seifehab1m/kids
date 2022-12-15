@@ -11,10 +11,12 @@ let addVal = document.getElementsByClassName('addVal');
 let counterValue = document.getElementsByClassName('counterValue');
 let pagination = document.getElementsByClassName('paginationLi');
 let shopTag = document.getElementsByClassName('tagItem');
+let productDetailsSize = document.getElementsByClassName('sizeItem');
+let mainImage = document.getElementById('mainImage'); // productDetails
+let productDetailsSmallItem = document.getElementsByClassName('smImg');
+let ImgUrl=""
 let value, index;
 let toggleBar = "close"
-
-
 iconSearch[0]?.addEventListener("click", function () {
   if (toggleBar == "close") {
     searchbar[0].style.cssText = "display:flex"
@@ -56,7 +58,6 @@ for (i = 0; i < addVal.length; i++) {
 }
 
 for (i = 0; i < addVal.length; i++) {
-
   subVal[i]?.addEventListener("click", function (e) {
 
     index = getIndex(e, subVal);
@@ -69,7 +70,6 @@ for (i = 0; i < addVal.length; i++) {
   })
 }
 function getIndex(e, array) {
-
   return Array.from(array).indexOf(e.target);
 }
 
@@ -167,24 +167,28 @@ for (i = 0; i < pagination.length; i++) {
   pagination[i]?.addEventListener("click", function (e) {
     index = getIndex(e, pagination);
     removeActive(pagination)
-    addActive(index,pagination)
+    addActive(index, pagination)
   })
 }
 function removeActive(array) {
   for (i = 0; i < array.length; i++) {
-
     array[i].classList.remove("active")
-    if(array==pagination)
-    {
+
+    if (array == pagination) {
       array[i].classList.remove("outlineMain")
+    }
+    if (array == productDetailsSmallItem) {
+      array[i].classList.add("borderItem")
     }
   }
 }
-function addActive(index,array) {
+function addActive(index, array) {
   array[index].classList.add("active")
-  if(array==pagination)
-  {
+  if (array == pagination) {
     array[index].classList.add("outlineMain")
+  }
+  if (array == productDetailsSmallItem) {
+    array[index].classList.remove("borderItem")
   }
 }
 
@@ -194,6 +198,31 @@ for (i = 0; i < shopTag.length; i++) {
   shopTag[i]?.addEventListener("click", function (e) {
     index = getIndex(e, shopTag);
     removeActive(shopTag)
-    addActive(index,shopTag)
+    addActive(index, shopTag)
+  })
+}
+// choose size in product details page
+function getImageSrc(e)
+{
+  ImgUrl=e.target.src;
+  mainImage.src=ImgUrl
+}
+for (i = 0; i < productDetailsSize.length; i++) {
+
+  productDetailsSize[i]?.addEventListener("click", function (e) {
+    index = getIndex(e, productDetailsSize);
+    removeActive(productDetailsSize)
+    addActive(index, productDetailsSize)
+  })
+}
+// select image in product details page
+
+for (i = 0; i < productDetailsSmallItem.length; i++) {
+
+  productDetailsSmallItem[i]?.addEventListener("click", function (e) {
+    index = getIndex(e, productDetailsSmallItem);
+    getImageSrc(e)
+    removeActive(productDetailsSmallItem)
+    addActive(index, productDetailsSmallItem)
   })
 }

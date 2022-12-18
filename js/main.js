@@ -28,9 +28,14 @@ iconSearch[0]?.addEventListener("click", function () {
   }
 })
 
-zoom[0]?.addEventListener("click", function () {
-  imageSelected[0].style.cssText = "display:flex !important"
-})
+for (i = 0; i < zoom.length; i++) {
+
+  zoom[i]?.addEventListener("click", function () {
+    imageSelected[0].style.cssText = "display:flex !important"
+  })
+}
+
+
 
 
 

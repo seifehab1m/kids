@@ -78,6 +78,10 @@ h2 {
     width: fit-content;
     white-space: nowrap;
 }
+.title a
+{
+    color: var(--mainColor) !important;
+}
 
 .yellowImgTitle {
     position: absolute;
@@ -132,7 +136,7 @@ p {
     border: 2px dotted white;
     color: white;
     border-radius: 20px;
-    width: 135px;
+    width: 145px;
     height: 42px;
 
 }
@@ -253,7 +257,8 @@ p {
     color: var(--colorMuted);
 }
 
-.navTitle .rocket {
+.navTitle .rocket 
+{
     width: 60px;
     height: 55px;
     padding-bottom: 90px;
@@ -393,7 +398,7 @@ p {
     top: 90px;
     width: 300px;
     height: 100px;
-    background-color: white;
+    background-color: rgb(235, 233, 233);
     border-radius: 25px;
     display: none;
     align-items: center;
@@ -629,7 +634,7 @@ nav li a {
 }
 
 .aboutbg p {
-    max-width: 90%;
+    max-width: 510px;
 }
 
 @media (max-width: 992px) {
@@ -727,7 +732,28 @@ nav li a {
     overflow-x: hidden;
     text-align: center;
 }
-
+.portfliobg .rocket
+{
+    width: 100px;
+    height: 80px;
+    left: 0px;
+    top: 10px;
+}
+.portfliobg .flower1
+{
+    top: 10%;
+    right: 16%;
+}
+.portfliobg .flower3
+{
+    top: 60%;
+    right: 16%;
+}
+.portfliobg .flower2
+{
+    top: 30%;
+    left: 16%;
+}
 /* @media (max-width: 1365px) {
 
     .portfliobg .avatarImg {
@@ -818,12 +844,12 @@ nav li a {
 
 .staffbg .leaf {
     left: 10%;
-    top: 20%;
+    top: 0%;
 }
 
 .staffbg .leaf2 {
-    top: 40%;
-    right: 15%;
+    top: 15%;
+    right: 5%;
 }
 
 .staffbg .staffParg {
@@ -1677,6 +1703,14 @@ footer a:hover {
     font-family: "BalooRegular";
     margin-top: 11px;
 }
+.shop .filter 
+{
+    margin-top: 60px;
+}
+.filter .form-check
+{
+    margin-top: 5px;
+}
 
 .shop .filter label {
     font-size: 16px;
@@ -1693,6 +1727,11 @@ footer a:hover {
 }
 
 /* tag */
+.shop .tag .tagItem
+{
+    margin-right:15px ;
+    margin-bottom:14px ;
+}
 .shop .tag h6 {
     font-size: 15px;
     font-family: "BalooMedium";
@@ -2198,11 +2237,11 @@ input[type=range]::-moz-range-track {
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border: none;
+    border: 1px solid var(--mainColor);
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background: var(--mainColor);
+    background: #FFFBDE;
     margin-top: -5px;
     position: relative;
     z-index: 10000;
